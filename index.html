@@ -68,7 +68,8 @@
         }
 
         .nav-btn:hover,
-        .btn:hover {
+        .btn:hover,
+        .order-btn:hover {
             background-color: #8e0000;
         }
 
@@ -224,6 +225,67 @@
             font-weight: bold;
         }
 
+        /* TOMBOL PESAN */
+        .order-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #c62828;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* POPUP PESANAN */
+        .popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .popup:target {
+            display: flex;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .popup-content h2 {
+            color: #c62828;
+            margin-bottom: 10px;
+        }
+
+        .popup-content p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .popup-close {
+            display: inline-block;
+            background: #c62828;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+        }
+
+        .popup-close:hover {
+            background: #8e0000;
+        }
+
         /* ABOUT */
         .about {
             padding: 70px 15%;
@@ -258,6 +320,16 @@
             color: #f5dada;
             margin-bottom: 8px;
             font-size: 14px;
+        }
+
+        .footer-info a {
+            color: #f5dada;
+            text-decoration: none;
+        }
+
+        .footer-info a:hover {
+            color: white;
+            text-decoration: underline;
         }
 
         .copyright {
@@ -320,6 +392,7 @@
                 font-size: 28px;
             }
         }
+
     </style>
 </head>
 
@@ -339,10 +412,14 @@
         <a href="#menu" class="nav-btn">Lihat Menu</a>
     </nav>
 
+
     <!-- HERO SECTION -->
     <section class="hero" id="home">
+
         <div class="hero-text">
-            <span class="tagline">Cita Rasa Asli Minangkabau</span>
+            <span class="tagline">
+                Cita Rasa Asli Minangkabau
+            </span>
 
             <h1>Nikmati Kelezatan Masakan Padang!</h1>
 
@@ -357,14 +434,17 @@
         <div class="hero-image">
             <img
                 src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800"
-                alt="Hidangan makanan"
-            >
+                alt="Hidangan makanan">
         </div>
+
     </section>
+
 
     <!-- MENU FAVORIT -->
     <section class="favorite">
+
         <h2>Menu Favorit Pelanggan</h2>
+
         <p class="subtitle">
             Pilihan paling disukai pecinta masakan Padang
         </p>
@@ -373,31 +453,49 @@
 
             <div class="favorite-card">
                 <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500" alt="Rendang">
+
                 <h3>Rendang Sapi</h3>
+
                 <p>Rendang empuk dengan bumbu rempah khas Minang.</p>
+
                 <span>Rp25.000</span>
+
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="favorite-card">
                 <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Ayam">
+
                 <h3>Ayam Bakar</h3>
+
                 <p>Ayam berbumbu khas Padang dengan aroma menggoda.</p>
+
                 <span>Rp20.000</span>
+
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="favorite-card">
                 <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500" alt="Sayur">
+
                 <h3>Gulai Sayur</h3>
+
                 <p>Sayuran segar dengan kuah santan gurih.</p>
+
                 <span>Rp12.000</span>
+
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
         </div>
     </section>
 
+
     <!-- SEMUA MENU -->
     <section class="menu-section" id="menu">
+
         <h2>Daftar Menu Kami</h2>
+
         <p class="subtitle">
             Berbagai pilihan makanan lezat setiap hari
         </p>
@@ -407,62 +505,73 @@
             <div class="menu-card">
                 <h3>Rendang Sapi</h3>
                 <p>Daging sapi empuk dengan bumbu rendang khas Minang.</p>
-                <span>Rp25.000</span>
+                <span>Rp25.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Ayam Pop</h3>
                 <p>Ayam lembut dengan sambal khas yang menggugah selera.</p>
-                <span>Rp22.000</span>
+                <span>Rp22.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Ayam Bakar Padang</h3>
                 <p>Ayam bakar dengan bumbu rempah dan santan.</p>
-                <span>Rp20.000</span>
+                <span>Rp20.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Gulai Tunjang</h3>
                 <p>Kikil sapi dengan kuah gulai santan yang gurih.</p>
-                <span>Rp25.000</span>
+                <span>Rp25.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Dendeng Balado</h3>
                 <p>Daging sapi dengan sambal balado pedas nikmat.</p>
-                <span>Rp27.000</span>
+                <span>Rp27.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Telur Balado</h3>
                 <p>Telur rebus dengan sambal merah khas Padang.</p>
-                <span>Rp10.000</span>
+                <span>Rp10.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Gulai Nangka</h3>
                 <p>Nangka muda dengan kuah santan dan rempah.</p>
-                <span>Rp12.000</span>
+                <span>Rp12.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Perkedel Kentang</h3>
                 <p>Perkedel kentang lembut dengan bumbu pilihan.</p>
-                <span>Rp7.000</span>
+                <span>Rp7.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
             <div class="menu-card">
                 <h3>Sambal Ijo</h3>
                 <p>Sambal cabai hijau khas rumah makan Padang.</p>
-                <span>Rp5.000</span>
+                <span>Rp5.000</span><br>
+                <a href="#pesanan" class="order-btn">Pesan Sekarang</a>
             </div>
 
         </div>
     </section>
 
+
     <!-- TENTANG -->
     <section class="about" id="tentang">
+
         <h2>Tentang Minang Jaya</h2>
 
         <p>
@@ -472,7 +581,9 @@
             Kami berkomitmen memberikan makanan lezat dan pelayanan
             terbaik untuk setiap pelanggan.
         </p>
+
     </section>
+
 
     <!-- FOOTER -->
     <footer id="kontak">
@@ -481,6 +592,7 @@
 
             <div class="footer-info">
                 <h3>Minang Jaya</h3>
+
                 <p>
                     Menghadirkan cita rasa asli Minangkabau
                     untuk menemani setiap waktu makan Anda.
@@ -489,14 +601,28 @@
 
             <div class="footer-info">
                 <h3>Kontak Kami</h3>
+
                 <p>📍 Jl. Pemuda No. 25, Magelang</p>
-                <p>✉️ minangjaya@gmail.com</p>
-                <p>📱 0812-3456-7890</p>
-                <p>📷 @minangjaya</p>
+
+                <p>
+                    ✉️ <a href="mailto:minangjaya@gmail.com">
+                    minangjaya@gmail.com</a>
+                </p>
+
+                <p>
+                    📱 <a href="https://wa.me/6281234567890">
+                    0812-3456-7890</a>
+                </p>
+
+                <p>
+                    📷 <a href="https://instagram.com/minangjaya">
+                    @minangjaya</a>
+                </p>
             </div>
 
             <div class="footer-info">
                 <h3>Cabang Kami</h3>
+
                 <p>• Magelang</p>
                 <p>• Yogyakarta</p>
                 <p>• Semarang</p>
@@ -506,10 +632,31 @@
         </div>
 
         <div class="copyright">
-            <p>&copy; 2026 Minang Jaya. All Rights Reserved.</p>
+            <p>
+                &copy; 2026 Minang Jaya. All Rights Reserved.
+            </p>
         </div>
 
     </footer>
+
+
+    <!-- POPUP PESANAN -->
+    <div class="popup" id="pesanan">
+
+        <div class="popup-content">
+
+            <h2>✓ Pesanan Terkirim!</h2>
+
+            <p>
+                Terima kasih telah memesan di Warung Minang Jaya.
+                Selamat menikmati!
+            </p>
+
+            <a href="#menu" class="popup-close">Tutup</a>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
